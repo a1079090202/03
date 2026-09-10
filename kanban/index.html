@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>本地待办看板</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>待办看板</h1>
+  <div class="topbar-tools">
+    <input id="search" type="text" placeholder="搜索标题 / 描述 / 标签…">
+    <button id="btn-export" class="btn">导出 JSON</button>
+    <button id="btn-import" class="btn">导入 JSON</button>
+    <input id="import-file" type="file" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<div id="filter-bar" class="filter-bar" hidden></div>
+
+<main id="board" class="board">
+  <section class="column">
+    <header class="column-header">
+      <span class="dot dot-todo"></span>要做
+      <span class="count" id="count-todo">0</span>
+    </header>
+    <div class="card-list" id="list-todo" data-column="todo"></div>
+    <button class="add-card" data-column="todo">＋ 添加卡片</button>
+  </section>
+
+  <section class="column">
+    <header class="column-header">
+      <span class="dot dot-doing"></span>在做
+      <span class="count" id="count-doing">0</span>
+    </header>
+    <div class="card-list" id="list-doing" data-column="doing"></div>
+    <button class="add-card" data-column="doing">＋ 添加卡片</button>
+  </section>
+
+  <section class="column">
+    <header class="column-header">
+      <span class="dot dot-done"></span>做完
+      <span class="count" id="count-done">0</span>
+    </header>
+    <div class="card-list" id="list-done" data-column="done"></div>
+    <button class="add-card" data-column="done">＋ 添加卡片</button>
+  </section>
+</main>
+
+<div id="modal-overlay" class="modal-overlay" hidden>
+  <div class="modal">
+    <h2 id="modal-title">新建卡片</h2>
+
+    <label class="field">
+      <span>标题 *</span>
+      <input id="f-title" type="text" maxlength="100">
+    </label>
+
+    <label class="field">
+      <span>描述</span>
+      <textarea id="f-desc" rows="3"></textarea>
+    </label>
+
+    <div class="field">
+      <span>截止时间（本地时间）</span>
+      <div class="deadline-row">
+        <input id="f-deadline" type="datetime-local">
+        <button id="f-deadline-clear" class="btn btn-small" type="button">清除</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <span>标签（点卡片上的标签移除，点下面的已有标签添加）</span>
+      <div id="f-tags" class="tag-editor"></div>
+      <div class="new-tag-row">
+        <input id="new-tag-name" type="text" placeholder="新标签名" maxlength="12">
+        <div id="new-tag-colors" class="color-row"></div>
+        <button id="new-tag-add" class="btn btn-small" type="button">添加</button>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button id="modal-cancel" class="btn">取消</button>
+      <button id="modal-save" class="btn btn-primary">保存</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/render.js"></script>
+<script src="js/drag.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

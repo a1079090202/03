@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "cards": [
+    {
+      "id": "mesample-000001",
+      "title": "写本周周报",
+      "description": "重点写看板工具的进展，周五下班前发出去",
+      "column": "doing",
+      "deadline": "2026-09-11T18:00",
+      "tags": ["工作"],
+      "createdAt": "2026-09-08T09:30"
+    },
+    {
+      "id": "mesample-000002",
+      "title": "还图书馆的书",
+      "description": "《重构》和《人月神话》，已经超期了（这张是用来演示过期变红置顶的）",
+      "column": "todo",
+      "deadline": "2026-09-08T20:00",
+      "tags": ["生活"],
+      "createdAt": "2026-09-05T21:00"
+    },
+    {
+      "id": "mesample-000003",
+      "title": "给妈妈打电话",
+      "description": "",
+      "column": "todo",
+      "deadline": null,
+      "tags": ["生活"],
+      "createdAt": "2026-09-09T10:00"
+    },
+    {
+      "id": "mesample-000004",
+      "title": "看完原生 JS 拖拽教程",
+      "description": "重点看 dragstart / dragover / drop 三个事件",
+      "column": "doing",
+      "deadline": "2026-09-15T22:00",
+      "tags": ["学习"],
+      "createdAt": "2026-09-07T14:00"
+    },
+    {
+      "id": "mesample-000005",
+      "title": "整理桌面文件夹",
+      "description": "把下载目录清空，截图归档（已完成，过期也不会变红）",
+      "column": "done",
+      "deadline": "2026-09-06T18:00",
+      "tags": [],
+      "createdAt": "2026-09-04T16:00"
+    },
+    {
+      "id": "mesample-000006",
+      "title": "准备季度汇报 PPT",
+      "description": "先列大纲，再找数据",
+      "column": "todo",
+      "deadline": "2026-09-20T17:00",
+      "tags": ["工作", "学习"],
+      "createdAt": "2026-09-09T11:20"
+    }
+  ],
+  "tags": [
+    { "name": "工作", "color": "#4f8ef7" },
+    { "name": "生活", "color": "#3fbf7f" },
+    { "name": "学习", "color": "#f7a94f" }
+  ]
+}
